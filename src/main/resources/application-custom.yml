@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        kafkaConsumer-in-0:
+          destination: some-topic-name
+          group: some-group-name
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    org.springframework.jdbc.core.StatementCreatorUtils: TRACE
+
+server.port: 8080
+server.address: 0.0.0.0
+
+client.port: 3000
+client.address: http://0.0.0.0
